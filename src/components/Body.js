@@ -1,12 +1,44 @@
 import React from 'react'
+import emailjs from "emailjs-com";
 import PortrateOne from './img/PortratCroped.png'
 import PortrateTwo from './img/portrat.JPG'
 import WorkGif from './img/computerGif.gif'
 import Work from './img/work1.jpg'
+import WildFire from './img/WildfireThumbnail.png'
+import Logo from './img/logo.png'
 import ScrollReveal from 'scrollreveal'
 
 const Body = () => {
     
+    // const showMenu = (toggleId, navId) =>{
+    //     const toggle = document.getElementById(toggleId),
+    //     nav = document.getElementById(navId)
+    
+    //     if(toggle && nav){
+    //         toggle.addEventListener('click', ()=>{
+    //             nav.classList.toggle('show')
+    //         })
+    //     }
+    // }
+    // showMenu('nav-toggle','nav-menu')
+    
+    // /*===== ACTIVE AND REMOVE MENU =====*/
+    // const navLink = document.querySelectorAll('.nav__link');   
+    
+    // function linkAction(){
+    //   /*Active link*/
+    //   navLink.forEach(n => n.classList.remove('active'));
+    //   this.classList.add('active');
+      
+    //   /*Remove menu mobile*/
+    //   const navMenu = document.getElementById('nav-menu')
+    //   navMenu.className.remove('show')
+    // }
+    // navLink.forEach(n => n.addEventListener('click', linkAction));
+
+
+
+
     const sr = ScrollReveal({
         origin: 'top',
         distance: '80px',
@@ -40,6 +72,42 @@ const Body = () => {
 
     return (
         <div>
+
+            {/* ====== NAVBAR ======
+            <header className="l-header">
+            <nav className="nav bd-grid">
+                <div>
+                    <a href="#home" className="nav__logo">
+                        <img src={Logo} className="img-responsive logo" alt=""/>
+                    </a>
+                </div>
+
+                <div className="nav__menu" id="nav-menu">
+                    <ul className="nav__list">
+                        <li className="nav__item"><a href="#home" className="nav__link active">Home</a></li>
+                        <li className="nav__item"><a href="#about" className="nav__link">About</a></li>
+                        <li className="nav__item"><a href="#skills" className="nav__link">Skills</a></li>
+                        <li className="nav__item"><a href="#work" className="nav__link">Work</a></li>
+                        <li className="nav__item"><a href="#contact" className="nav__link">Contact</a></li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="nav__toggle" id="nav-toggle">
+                    <i className="bx bx-menu"></i>
+                </div>
+
+            </nav>
+        </header> */}
+
+
+
+
+
             
             <main className="l-main">
 
@@ -140,7 +208,7 @@ const Body = () => {
                     <h2 className="section-title">Work</h2>
                     <div className="work__container bd-grid">
                     <div className="work__img">
-                        <img src={Work} alt="" />  
+                        <img src={WildFire} alt="" />  
                     </div>
                     <div className="work__img">
                         <img src={Work} alt="" />
@@ -152,7 +220,7 @@ const Body = () => {
                 </section>
 
 
-                {/*===== CONTACT =====*/}
+                {/* ===== CONTACT =====
                 <section className="contact section" id="contact">
                     <h2 className="section-title">Contact</h2>
                     <div className="contact__container bd-grid">
@@ -163,7 +231,7 @@ const Body = () => {
                         <input type="button" defaultValue="Submit" className="contact__button button" />
                     </form>
                     </div>
-                </section>
+                </section> */}
 
             </main>
 

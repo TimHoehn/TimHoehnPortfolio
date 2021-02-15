@@ -4,6 +4,7 @@ import Logo from './img/logo.png'
 const NavBar = () => {
 
     const showMenu = (toggleId, navId) =>{
+        console.log("showMenu")
         const toggle = document.getElementById(toggleId),
         nav = document.getElementById(navId)
     
@@ -13,7 +14,7 @@ const NavBar = () => {
             })
         }
     }
-    showMenu('nav-toggle','nav-menu')
+    // showMenu('nav-toggle','nav-menu')
 
     const navLink = document.querySelectorAll('.nav__link');   
 
@@ -33,6 +34,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
     return (
+        <div>
         <header className="l-header">
             <nav className="nav bd-grid">
                 <div>
@@ -56,12 +58,13 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
                     </ul>
                 </div>
 
-                <div className="nav__toggle" id="nav-toggle">
+                <div className="nav__toggle" id="nav-toggle" onClick={showMenu.bind(this)}>
                     <i className="bx bx-menu"></i>
                 </div>
 
             </nav>
         </header>
+        </div>
     )
 }
 
